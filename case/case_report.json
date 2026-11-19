@@ -1,0 +1,17 @@
+{
+ "outer_mm": [
+  101.8,
+  61.8,
+  29.6
+ ],
+ "board_top_z": 8.6,
+ "inner_top_z": 26.6,
+ "lid_underside_gap_over_tallest": null,
+ "screw": "M3 x 25 mm pan head (+ M3 x 5.7 mm heat-set inserts in the 4 standoffs)",
+ "issues": [],
+ "tallest_part_z": 25.0,
+ "clearance_to_lid_mm": 1.6,
+ "lid_pillar_vs_board": "pillars sit on the board top (z=8.6), standoffs under it (z=7.0)",
+ "case_base_volume_cm3": 31.2,
+ "case_lid_volume_cm3": 21.4
+}
