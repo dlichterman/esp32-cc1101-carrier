@@ -34,7 +34,7 @@ All through-hole and optional: populate only what you need.
 
 - Electrolytics are polarised: the square pad (pad 1) is + (VIN or 3V3).
 - C3 can be anything from 10 to 47 µF, as long as it is D5 mm or smaller with 2 mm pitch; a wider can would reach under the CC1101 module. Heights above are what the case model assumes (the lid is 18 mm above the board).
-- Fit C1 only when powering from VIN (battery or external 5 V). On USB power, 470 µF on the shared 5 V rail can cause a large inrush current at plug-in, so leave it off or use a smaller value.
+- Fit C1 when powering from VIN through long wires or a battery. On USB power it isn't needed. 470 µF is well over the USB inrush limit (10 µF), which can occasionally upset a strict port or hub at plug-in. If you want it fitted on USB anyway, a smaller value (47–100 µF) is a reasonable compromise.
 
 ## Layout notes
 - Bottom copper (B.Cu) is a solid GND plane; top copper (F.Cu) carries all SPI signals plus a GND pour, tied together with stitching vias.
