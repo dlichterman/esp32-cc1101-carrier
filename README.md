@@ -22,6 +22,20 @@ Example ESPHome SPI/CC1101 pin settings: `clk_pin: GPIO18`, `mosi_pin: GPIO23`, 
 
 Fab files: `fab/` (Gerbers + separate PTH/NPTH drill files, 2 layers, 95 x 55 mm, 1.6 mm).
 
+## Capacitors
+All through-hole and optional: populate only what you need.
+
+| Ref | Value | Type | Rail | Size | Location |
+|---|---|---|---|---|---|
+| C1 | 470 µF, 16 V | Aluminium electrolytic, radial | VIN | D8 mm, 3.5 mm pitch, about 12.5 mm tall | Left of the ESP32 |
+| C2 | 100 nF, 50 V | Ceramic (MLCC), X7R | VIN | 5 mm lead pitch (disc up to 5 x 2.5 mm) | Left of the ESP32 |
+| C3 | 22 µF, 16 V | Aluminium electrolytic, radial | 3V3 | D5 mm, 2 mm pitch, about 11.5 mm tall | Above the CC1101 header |
+| C4 | 100 nF, 50 V | Ceramic (MLCC), X7R | 3V3 | 5 mm lead pitch (disc up to 5 x 2.5 mm) | Above the CC1101 header, by its VCC pin |
+
+- Electrolytics are polarised: the square pad (pad 1) is + (VIN or 3V3).
+- C3 can be anything from 10 to 47 µF, as long as it is D5 mm or smaller with 2 mm pitch; a wider can would reach under the CC1101 module. Heights above are what the case model assumes (the lid is 18 mm above the board).
+- Fit C1 when powering from VIN through long wires or a battery. On USB power it isn't needed. 470 µF is well over the USB inrush limit (10 µF), which can occasionally upset a strict port or hub at plug-in. If you want it fitted on USB anyway, a smaller value (47–100 µF) is a reasonable compromise.
+
 ## Layout notes
 - Bottom copper (B.Cu) is a solid GND plane; top copper (F.Cu) carries all SPI signals plus a GND pour, tied together with stitching vias.
 - Signals stay on F.Cu except two short hops to B.Cu: SCK (about 4.6 mm) and +3V3 (about 8.9 mm), each through one via pair. The rest of B.Cu is the ground plane.
