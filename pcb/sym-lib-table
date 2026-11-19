@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ESP32_DevKit_V1_DOIT")(type "KiCad")(uri "${KIPRJMOD}/libs/esp32_devkit_v1_doit.kicad_sym")(options "")(descr "VictorLamoine ESP32 DevKit V1 DOIT"))
+)
