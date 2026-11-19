@@ -36,8 +36,8 @@ J1_PITCH_FP = ("Connector_PinHeader_2.54mm", "PinHeader_2x04_P2.54mm_Vertical")
 # (ref, value, x, y, footprint lib, footprint, symbol, rotation, label dx, label dy, pad-1 net)
 CAPS = [("C1", "470uF", 5.8, 44.0, "Capacitor_THT", "CP_Radial_D8.0mm_P3.50mm", "Device:C_Polarized", 90, 0.0, -7.6, "VIN"),
         ("C2", "100nF", 13.8, 43.56, "Capacitor_THT", "C_Disc_D5.0mm_W2.5mm_P5.00mm", "Device:C", 270, 0.0, 8.2, "VIN"),
-        # rev B: C3 moved up 3.5 mm (y 17.5 -> 14.0) so its 5 mm body clears the CC1101 breakout's edge (~y 18.3)
-        ("C3", "22uF", 74.5, 14.0, "Capacitor_THT", "CP_Radial_D5.0mm_P2.00mm", "Device:C_Polarized", 0, 1.0, -3.6, "+3V3"),
+        # rev B: C3 moved up 2.5 mm (y 17.5 -> 15.0) so its 5 mm body clears the CC1101 breakout's edge (~y 18.3)
+        ("C3", "22uF", 74.5, 15.0, "Capacitor_THT", "CP_Radial_D5.0mm_P2.00mm", "Device:C_Polarized", 0, 1.0, -3.6, "+3V3"),
         ("C4", "100nF", 64.5, 17.5, "Capacitor_THT", "C_Disc_D5.0mm_W2.5mm_P5.00mm", "Device:C", 0, 2.5, -2.4, "+3V3")]
 HOLES = [(4, 4), (BOARD_W - 4, 4), (4, BOARD_H - 4), (BOARD_W - 4, BOARD_H - 4)]
 CLEAR, SIG_W, PWR_W = 0.2, 0.3, 0.5

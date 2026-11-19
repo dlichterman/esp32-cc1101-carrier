@@ -32,4 +32,4 @@ Items marked (photo) were measured from your photos of the CC1101 module, so tre
 If any of these are different, change the matching parameter in `make_case.py` and re-run.
 
 ## C3
-Rev B moves C3 3.5 mm toward the top of the board, so its 5 mm body (y 11.5 to 16.5 mm) is about 1.8 mm clear of the CC1101 module's edge (about y 18.3 mm, measured from photos). It can stand upright (11.5 mm, under the 18 mm lid). On a rev A board, C3 sits partly under the module: lay it on its side with the body pointing toward the top of the board.
+Rev B moves C3 2.5 mm toward the top of the board, so its 5 mm body (y 12.5 to 17.5 mm) is about 0.8 mm clear of the CC1101 module's edge (about y 18.3 mm, measured from photos). It can stand upright (11.5 mm, under the 18 mm lid). On a rev A board, C3 sits partly under the module: lay it on its side with the body pointing toward the top of the board.

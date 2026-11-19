@@ -23,8 +23,8 @@ The guide advises against a solid layer and routing on both layers. Here B.Cu is
 ## Open items to check before ordering
 1. Print `reports/print_1to1_letter.pdf` (or the A4 version) at Actual size (30 mm ruler included; it must measure 30 mm) and lay the ESP32 and CC1101 modules on it. This confirms row spacing (25.4 mm assumed) and the CC1101 header pitch (2.54 mm assumed; some modules use 1.27 mm).
 2. Bill of materials: 2 × 1x15 2.54 mm header (ESP32 sockets), 1 × 2x4 2.54 mm header for the CC1101; optional: C1 470 µF 16 V radial electrolytic (D8 mm, 3.5 mm pitch), C3 22 µF 16 V radial electrolytic (D5 mm, 2 mm pitch), C2 and C4 100 nF X7R through-hole ceramic (5 mm pitch, 50 V).
-3. Two decoupling pairs, each an electrolytic plus a 100 nF ceramic; populate only what is needed. VIN pair (left of the ESP32, VIN pin 15 to GND): C1 470 µF electrolytic (D8 mm, 3.5 mm pitch) and C2 100 nF ceramic (5 mm pitch). 3V3 pair (above the CC1101 header; C4 next to its VCC pin, C3 3.5 mm further up so it clears the module in rev B): C3 22 µF electrolytic (D5 mm, 2 mm pitch; anything from 10 to 47 µF works) and C4 100 nF ceramic. Electrolytic polarity: pad 1 (square) is the positive supply pad (VIN or 3V3). Use C1 only when powering from VIN (battery or external 5 V); with USB, a 470 µF capacitor on the shared 5 V rail can cause a large inrush at plug-in, so leave it off or fit a smaller value.
-4. Lay the CC1101 breakout on the 1:1 print with its header over J1. Check that it clears C4 above the header and C3 (rev B: its body should sit about 1.8 mm outside the module's edge), and that its antenna and any overhang suit the board edge. The breakout's own dimensions are not in this design.
+3. Two decoupling pairs, each an electrolytic plus a 100 nF ceramic; populate only what is needed. VIN pair (left of the ESP32, VIN pin 15 to GND): C1 470 µF electrolytic (D8 mm, 3.5 mm pitch) and C2 100 nF ceramic (5 mm pitch). 3V3 pair (above the CC1101 header; C4 next to its VCC pin, C3 2.5 mm further up so it clears the module in rev B): C3 22 µF electrolytic (D5 mm, 2 mm pitch; anything from 10 to 47 µF works) and C4 100 nF ceramic. Electrolytic polarity: pad 1 (square) is the positive supply pad (VIN or 3V3). Use C1 only when powering from VIN (battery or external 5 V); with USB, a 470 µF capacitor on the shared 5 V rail can cause a large inrush at plug-in, so leave it off or fit a smaller value.
+4. Lay the CC1101 breakout on the 1:1 print with its header over J1. Check that it clears C4 above the header and C3 (rev B: its body should sit about 0.8 mm outside the module's edge), and that its antenna and any overhang suit the board edge. The breakout's own dimensions are not in this design.
 
 ## Placement
 Board is 95 × 55 mm (8 mm extra on the left for the VIN capacitors, 5 mm extra on the right for the CC1101 breakout). ESP32 USB end is 1 mm in from the bottom edge. Ruler is 30 mm.
@@ -36,7 +36,7 @@ The top 9.2 mm of the board (above the ESP32 pin rows, the full width) has no gr
 clk GPIO18, mosi GPIO23, miso GPIO19, cs GPIO22, gdo0 GPIO21, gdo2 GPIO4. None are strapping pins (GPIO0/2/5/12/15).
 
 ## Capacitor spacing (hand soldering)
-Board is 95 × 55 mm (extra 5 mm on the CC1101 side for the breakout board). C1's body is 1.8 mm from the left board edge. C2 sits directly below the VIN trace (pad 1 on the trace), 2.75 mm from C1's body and 0.85 mm from the ESP32 module's silkscreen outline. C3 and C4 are 5 mm apart pad to pad horizontally; in rev B, C3 sits 3.5 mm higher than C4.
+Board is 95 × 55 mm (extra 5 mm on the CC1101 side for the breakout board). C1's body is 1.8 mm from the left board edge. C2 sits directly below the VIN trace (pad 1 on the trace), 2.75 mm from C1's body and 0.85 mm from the ESP32 module's silkscreen outline. C3 and C4 are 5 mm apart pad to pad horizontally; in rev B, C3 sits 2.5 mm higher than C4.
 
 ## Final review (review.py, independent of build.py)
 | Check | Result |

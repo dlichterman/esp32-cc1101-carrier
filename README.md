@@ -29,7 +29,7 @@ Fab files: `fab/` (Gerbers + separate PTH/NPTH drill files, 2 layers, 95 x 55 mm
 - Silkscreen: strokes 0.2 mm, text >= 1.0 mm (JLCPCB DFM rates 0.15 mm only as a warning). Solder-mask expansion 0.05 mm.
 
 ## Rev B (current)
-- C3 (22 uF, 3V3 bulk cap) moved 3.5 mm toward the top of the board (y 17.5 -> 14.0 mm). Its body now clears the CC1101 breakout's edge by about 1.8 mm, so it can stand upright instead of being bent over. Its 3V3 trace is about 3 mm longer; nothing else in the routing changed.
+- C3 (22 uF, 3V3 bulk cap) moved 2.5 mm toward the top of the board (y 17.5 -> 15.0 mm). Its body now clears the CC1101 breakout's edge by about 0.8 mm (module edge estimated from photos, +/-0.5 mm), so it can stand upright instead of being bent over. Its 3V3 trace is about 2 mm longer; nothing else in the routing changed.
 - Silkscreen and title block read rev B.
 
 ## Rev A: layout refinement

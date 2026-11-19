@@ -101,8 +101,8 @@ env["SMA connector"] = cq.Workplane("YZ").workplane(offset=sma_x0).center(cc_yc,
 env["Antenna nut (screwed on)"] = cq.Workplane("YZ").workplane(offset=sma_x0 + SMA_LEN - 6.0).center(cc_yc, sma_zc).circle(5.5).extrude(10.0)
 env["C1 470uF (8x12)"] = cyl(5.8, ky(42.25), Z_BOARD_TOP, Z_BOARD_TOP + 12.5, 8.0)
 env["C2 100nF"] = box(12.55, ky(46.06) - 2.9, Z_BOARD_TOP, 15.05, ky(46.06) + 2.9, Z_BOARD_TOP + 7.5)
-# C3 (rev B: centre y 14.0, body y 11.5..16.5) stands upright, clear of the CC1101 module edge (~y 18.3), 5 mm dia x 11.5 mm
-env["C3 22uF (standing)"] = cyl(75.5, ky(14.0), Z_BOARD_TOP, Z_BOARD_TOP + 11.5, 5.0)
+# C3 (rev B: centre y 15.0, body y 12.5..17.5) stands upright, clear of the CC1101 module edge (~y 18.3), 5 mm dia x 11.5 mm
+env["C3 22uF (standing)"] = cyl(75.5, ky(15.0), Z_BOARD_TOP, Z_BOARD_TOP + 11.5, 5.0)
 env["C4 100nF"] = box(63.9, ky(17.5) - 1.5, Z_BOARD_TOP, 70.1, ky(17.5) + 1.5, Z_BOARD_TOP + 7.5)
 board = box(0, 0, FLOOR + STANDOFF_H, BOARD_W, BOARD_H, Z_BOARD_TOP)
 
